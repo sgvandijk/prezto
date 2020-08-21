@@ -54,7 +54,7 @@ function prompt_minimal_setup {
   zstyle ':prezto:module:python:info:virtualenv' format '%f%F{3}(%v)%F{7} '
 
   # Define prompts.
-  PROMPT='%F{blue}%2~%f${vcs_info_msg_0_} %F{green}»%f '
+  PROMPT='${SSH_TTY:+"%F{red}%m%f "}%F{blue}%2~%f${vcs_info_msg_0_} %F{green}»%f '
   # RPROMPT=''
   RPROMPT='$python_info[virtualenv]${editor_info[overwrite]}%(?:: %F{1}'
 }
